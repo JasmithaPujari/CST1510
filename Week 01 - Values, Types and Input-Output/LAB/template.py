@@ -2,9 +2,9 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  : Jasmitha Pujari
+Lane  :  IT    
+Date  : 27/09/2026
 
 Run it:   python template.py
 
@@ -21,9 +21,9 @@ Delete these instructions as you replace them with your code.
 #
 #    Remember: input() always gives back text.
 
-label = ""      # : replace with an input() call
-first = 0.0     # : replace with an input() call, converted
-second = 0.0    # : replace with an input() call, converted
+host_name = input("Enter the hostname: ")     # : replace with an input() call
+used_gb = float(input("Enter the used GB: "))     # : replace with an input() call, converted
+total_gb = float(input("Enter the total GB: "))    # : replace with an input() call, converted
 
 
 # ================================================================== PROCESS
@@ -34,8 +34,8 @@ second = 0.0    # : replace with an input() call, converted
 #
 #    Do not type the answers. Calculate them.
 
-difference = 0.0   # 
-percent = 0.0      # 
+free = used_gb - total_gb    # 
+percent = (used_gb / total_gb) * 100         # 
 
 
 # =================================================================== OUTPUT
@@ -48,10 +48,14 @@ percent = 0.0      #
 #    Useful:   f"{value:>10.2f}"    right-aligned, 2 decimal places
 #              f"{value:>+10.2f}"   the same, but always shows the sign
 
-print()
+
 print("=" * 34)
-print(f"  RECORD CHECK  -  {label}")
+print(f"  RECORD CHECK  -  {host_name}")
 print("=" * 34)
+print(f"Used GB:{used_gb:>10.2f}")
+print(f"Total GB:{total_gb:>10.2f}")
+print(f"Free GB:{free:>+10.2f}")
+print(f"Percent:{percent:>10.2f}%")
 
 # : your report lines go here
 
